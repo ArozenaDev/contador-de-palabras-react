@@ -12,7 +12,7 @@ function App() {
         name="text" rows="20" cols="60" 
         placeholder="Introduce un texto..." />
         <br/>
-        <input type="button" id="go" value="Contar" onClick={() => setSentence(tempSentence.split('').length)} />
+        <input type="button" id="go" value="Contar" onClick={() => setSentence(tempSentence.split('').filter((space) => space !== ' ').length)} />
         <div id="result">{sentence}</div>
     </>
   )
